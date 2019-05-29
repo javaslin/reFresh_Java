@@ -1,3 +1,5 @@
+package 设计模式;
+
 import java.net.URL;
 
 public class ImageViewer {

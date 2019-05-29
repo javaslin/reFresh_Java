@@ -1,3 +1,5 @@
+package 设计模式;
+
 public class SimpleFactory {
     public Product createProduct(int type){
         if(type==1){

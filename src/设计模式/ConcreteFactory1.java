@@ -1,3 +1,5 @@
+package 设计模式;
+
 public class ConcreteFactory1 extends AbstractFactory {
 
     AbstractProductA createProductA() {

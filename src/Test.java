@@ -1,3 +1,5 @@
+import 设计模式.Singleton;
+
 public class Test {
     private volatile static Singleton uniqueInstance;
 

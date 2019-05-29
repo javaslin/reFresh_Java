@@ -1,3 +1,7 @@
+package 设计模式;
+
+import 设计模式.Image;
+
 import java.net.URL;
 
 public class HighResolutionImage implements Image {
@@ -29,6 +33,6 @@ public class HighResolutionImage implements Image {
 
     @Override
     public void showImage() {
-        System.out.println("Real Image: "+imageURL);
+        System.out.println("Real 设计模式.Image: "+imageURL);
     }
 }

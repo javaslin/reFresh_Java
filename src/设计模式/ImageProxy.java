@@ -1,3 +1,5 @@
+package 设计模式;
+
 public class ImageProxy implements  Image {
     private HighResolutionImage highResolutionImage;
 
@@ -9,7 +11,7 @@ public class ImageProxy implements  Image {
     public void showImage() {
         while (!highResolutionImage.isLoad()){
             try {
-                System.out.println("Temp Image: "+ highResolutionImage);
+                System.out.println("Temp 设计模式.Image: "+ highResolutionImage);
                 Thread.sleep(100);
             }catch (InterruptedException e){
                 e.printStackTrace();
