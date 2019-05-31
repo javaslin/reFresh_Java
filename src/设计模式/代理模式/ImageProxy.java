@@ -4,16 +4,17 @@ public class ImageProxy implements Image {
     private HighResolutionImage highResolutionImage;
 
 
-    public ImageProxy(HighResolutionImage highResolutionImage){
-        this.highResolutionImage=highResolutionImage;
+    public ImageProxy(HighResolutionImage highResolutionImage) {
+        this.highResolutionImage = highResolutionImage;
     }
+
     @Override
     public void showImage() {
-        while (!highResolutionImage.isLoad()){
+        while (!highResolutionImage.isLoad()) {
             try {
-                System.out.println("Temp 设计模式.代理模式.Image: "+ highResolutionImage);
+                System.out.println("Temp 设计模式.代理模式.Image: " + highResolutionImage);
                 Thread.sleep(100);
-            }catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

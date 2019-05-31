@@ -1,7 +1,5 @@
 package 设计模式.抽象工厂;
 
-import 设计模式.抽象工厂.*;
-
 public class ConcreteFactory1 extends AbstractFactory {
 
     AbstractProductA createProductA() {

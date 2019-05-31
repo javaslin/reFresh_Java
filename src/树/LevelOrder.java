@@ -32,6 +32,7 @@ public class LevelOrder {
         }
 
     }
+
     public static void main(String[] args) {
         TreeNode head = new TreeNode(1);
         head.left = new TreeNode(2);

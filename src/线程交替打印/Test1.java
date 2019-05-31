@@ -7,11 +7,17 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Test1 extends Thread {
 
-    private final String str[] = { "A", "B", "C" };
     private final static AtomicInteger atomI = new AtomicInteger();
+    private final String str[] = {"A", "B", "C"};
 
     public Test1(String name) {
         this.setName(name);
+    }
+
+    public static void main(String[] args) {
+        new Test1("A").start();
+        new Test1("B").start();
+        new Test1("C").start();
     }
 
     @Override
@@ -42,12 +48,6 @@ public class Test1 extends Thread {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        new Test1("A").start();
-        new Test1("B").start();
-        new Test1("C").start();
     }
 }
 

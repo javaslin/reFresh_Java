@@ -9,14 +9,16 @@ public class TestMain {
     要求控制台中输出的内容为 a1b2c3d4
      */
     static final Object object = new Object();
+
     public static void main(String[] args) throws InterruptedException {
 
         new Thread(new Runnable() {
-            String a[] = {"a","b","c","d"};
+            String a[] = {"a", "b", "c", "d"};
+
             @Override
             public void run() {
-                for(int i=0;i< 4 ;i++){
-                    synchronized (object){
+                for (int i = 0; i < 4; i++) {
+                    synchronized (object) {
                         System.out.println("线程a 开始执行");
                         object.notify();
                         try {
@@ -34,11 +36,12 @@ public class TestMain {
             }
         }).start();
         new Thread(new Runnable() {
-            int a[] = {1,2,3,4};
+            int a[] = {1, 2, 3, 4};
+
             @Override
             public void run() {
-                for(int i=0;i<4;i++){
-                    synchronized (object){
+                for (int i = 0; i < 4; i++) {
+                    synchronized (object) {
                         System.out.println("线程1 开始执行");
                         object.notify();
                         try {

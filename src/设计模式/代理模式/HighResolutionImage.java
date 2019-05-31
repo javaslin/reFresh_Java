@@ -9,6 +9,13 @@ public class HighResolutionImage implements Image {
     private int width;
 
 
+    public HighResolutionImage(URL imageURL) {
+        this.imageURL = imageURL;
+        this.startTime = System.currentTimeMillis();
+        this.width = 600;
+        this.height = 600;
+    }
+
     public int getHeight() {
         return height;
     }
@@ -16,21 +23,14 @@ public class HighResolutionImage implements Image {
     public int getWidth() {
         return width;
     }
-    public HighResolutionImage(URL imageURL){
-        this.imageURL=imageURL;
-        this.startTime=System.currentTimeMillis();
-        this.width=600;
-        this.height=600;
-    }
 
-
-    public boolean isLoad(){
-        long endTime=System.currentTimeMillis();
-        return endTime-startTime>3000;
+    public boolean isLoad() {
+        long endTime = System.currentTimeMillis();
+        return endTime - startTime > 3000;
     }
 
     @Override
     public void showImage() {
-        System.out.println("Real 设计模式.代理模式.Image: "+imageURL);
+        System.out.println("Real 设计模式.代理模式.Image: " + imageURL);
     }
 }

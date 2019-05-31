@@ -4,8 +4,8 @@ public class backpack01 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int [] time = new int[n];
-        int [] grade = new int[n];
+        int[] time = new int[n];
+        int[] grade = new int[n];
         for (int i = 0; i < n; i++) {
             grade[i] = in.nextInt();
         }
@@ -21,11 +21,11 @@ public class backpack01 {
 
         for (int i = 1; i < n; i++) {
             for (int j = time[i]; j <= target; j++) {
-                tpp[i][j] = Math.max(tpp[i-1][j],tpp[i-1][j - time[i]] + grade[i]);
+                tpp[i][j] = Math.max(tpp[i - 1][j], tpp[i - 1][j - time[i]] + grade[i]);
             }
         }
 
-        System.out.println(tpp[n-1][target]);
+        System.out.println(tpp[n - 1][target]);
 
     }
 }

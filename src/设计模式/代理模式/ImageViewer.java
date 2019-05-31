@@ -3,11 +3,11 @@ package 设计模式.代理模式;
 import java.net.URL;
 
 public class ImageViewer {
-    public static void main(String[] args)throws Exception{
-        String image="http://image.jpg";
-        URL url=new URL(image);
-        HighResolutionImage highResolutionImage=new HighResolutionImage(url);
-        ImageProxy imageProxy= new ImageProxy(highResolutionImage);
+    public static void main(String[] args) throws Exception {
+        String image = "http://image.jpg";
+        URL url = new URL(image);
+        HighResolutionImage highResolutionImage = new HighResolutionImage(url);
+        ImageProxy imageProxy = new ImageProxy(highResolutionImage);
         imageProxy.showImage();
     }
 }

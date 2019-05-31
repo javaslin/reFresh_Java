@@ -1,4 +1,5 @@
 package 线程交替打印;
+
 /*
 两个线程交替打印A和B，如ABABAB
  */
@@ -7,8 +8,8 @@ public class Test {
         final PrintAB print = new PrintAB();
 
         new Thread(new Runnable() {
-            public void run(){
-                for(int i=0;i<5;i++) {
+            public void run() {
+                for (int i = 0; i < 5; i++) {
                     print.printA();
                 }
             }
@@ -16,18 +17,19 @@ public class Test {
 
         new Thread(new Runnable() {
             public void run() {
-                for(int i=0;i<5;i++) {
-                    print.printB(); }
+                for (int i = 0; i < 5; i++) {
+                    print.printB();
+                }
             }
         }).start();
     }
 }
 
-class PrintAB{
+class PrintAB {
     private boolean flag = true;
 
-    public synchronized void printA () {
-        while(!flag) {
+    public synchronized void printA() {
+        while (!flag) {
             try {
                 this.wait();
             } catch (InterruptedException e) {
@@ -39,8 +41,8 @@ class PrintAB{
         this.notify();
     }
 
-    public synchronized void printB () {
-        while(flag) {
+    public synchronized void printB() {
+        while (flag) {
             try {
                 this.wait();
             } catch (InterruptedException e) {
