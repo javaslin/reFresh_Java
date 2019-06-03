@@ -1,4 +1,4 @@
-package 线程交替打印;
+package 多线程.线程交替打印;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

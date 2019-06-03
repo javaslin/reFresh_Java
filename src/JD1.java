@@ -11,7 +11,6 @@ public class JD1 {
 
         }
         String str = sc.nextLine();
-
         Map<String, int[]> all = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j <= str.length(); j++) {

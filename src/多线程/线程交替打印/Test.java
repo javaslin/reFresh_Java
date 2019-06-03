@@ -1,4 +1,4 @@
-package 线程交替打印;
+package 多线程.线程交替打印;
 
 /*
 两个线程交替打印A和B，如ABABAB
