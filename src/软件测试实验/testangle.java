@@ -32,5 +32,6 @@ public class testangle {
     public void testIstriangle() {
         mytriangle obj = new mytriangle();
         assertEquals(this.result, obj.istriangle(param1, param2, param3));
+        System.out.println(new int[]{2}.toString());
     }
 }

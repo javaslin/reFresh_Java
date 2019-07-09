@@ -1,5 +1,8 @@
 package 设计模式.单例模式;
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
 public class Singleton {
     private volatile static Singleton uniqueInstance;
 
